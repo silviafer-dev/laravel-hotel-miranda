@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Miranda | {{$title}}</title>
+    <!-- <link rel="stylesheet" href="normalize.css" /> -->
+    <link rel="stylesheet" type="text/css" href={{URL::to('css/home.css') }} />
+    <link rel="stylesheet" type="text/css" href={{URL::to('css/carousel.css') }} />
+    <link rel="stylesheet" type="text/css" href={{URL::to('css/button.css') }} />
+    <link rel="stylesheet" type="text/css" href={{URL::to('css/styles.css') }} />
+
+    <script
+    src="https://kit.fontawesome.com/b519a5fd3c.js"
+    crossorigin="anonymous"
+    ></script>
 </head>
 <body>
 
+    @include ('header')
 
     <section class="head-main">
 
@@ -556,6 +568,7 @@
       </div>
     </section>
 
+  @include ('footer')
 
 
 </body>

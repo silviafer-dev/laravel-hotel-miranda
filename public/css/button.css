@@ -1,0 +1,31 @@
+.button-page {
+    background-color: inherit;
+    letter-spacing: 2.8px;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 20px 45px;
+    border: none;
+    margin: 20px;
+    border: 1px solid #ffffff54;
+}
+.button-page__sepia {
+    background-color: #bead8e;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.button-page:hover {
+    background-color: #bead8e;
+}
+.head-main__buttons {
+    font-weight: 700;
+    margin-top: 10px;
+    color: black;
+    float: right;
+    background-color: white;
+    padding: 15px;
+}
+.head-main__buttons--sepia {
+    color: #bead8e;
+}

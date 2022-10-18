@@ -12,15 +12,28 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-use App\Models\User;
-
-Route::get('/users/{user}', function (User $user) {
-    return $user->email;
-});
+use App\Models\Room;
 
 Route::get('/', function () {
-    return view('home');
+    return view('home', ['title' => 'Home']);
 });
-Route::get('/user', function () {
-    return view('home');
+
+Route::get('/about', function()
+{
+   return View::make('about', ['title' => 'About Us']);
+});
+Route::get('/contact', function()
+{
+   return View::make('contact', ['title' => 'Contact Us']);
+});
+Route::get('/rooms', function()
+{
+   return View::make('rooms',  ['title' => 'Rooms']);
+});
+Route::get('/rooms/{room}', function (Room $room) {
+    return $room->id;
+});
+Route::get('/offers', function()
+{
+   return View::make('offers', ['title' => 'Offers']);
 });

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RoomController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +13,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-use App\Models\Room;
+
+
 
 Route::get('/', function () {
     return view('home', ['title' => 'Home']);
@@ -26,10 +28,13 @@ Route::get('/contact', function()
 {
    return View::make('contact', ['title' => 'Contact Us']);
 });
-Route::get('/rooms', function()
-{
-   return View::make('rooms',  ['title' => 'Rooms']);
-});
+
+
+Route::get('/rooms', [RoomController::class, 'index'],) ->name('rooms');
+
+
+
+
 Route::get('/rooms/{room}', function (Room $room) {
     return $room->id;
 });

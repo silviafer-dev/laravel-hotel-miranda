@@ -1,4 +1,4 @@
-import {comunidades} from "./españa_comunidades";
+import {comunidades} from "./espana_comunidades.js";
 
 const locations = [
     {

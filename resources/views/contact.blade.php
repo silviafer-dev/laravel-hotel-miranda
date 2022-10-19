@@ -16,7 +16,7 @@
     src="https://kit.fontawesome.com/b519a5fd3c.js"
     crossorigin="anonymous"
     ></script>
-      <script src="{{ asset('js/contact.js') }}"></script>
+      <script src="{{ URL::to('js/contact.js') }}" type='module'></script>
 
 </head>
 <body>

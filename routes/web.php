@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoomController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,21 +25,13 @@ Route::get('/about', function()
 {
    return View::make('about', ['title' => 'About Us']);
 });
-Route::get('/contact', function()
-{
-   return View::make('contact', ['title' => 'Contact Us']);
-});
+Route::get('/contact', [ContactController::class, 'index'])-> name('contact');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
 
-Route::get('/rooms', [RoomController::class, 'index'],) ->name('rooms');
-
-
-
-
+Route::get('/rooms', [RoomController::class, 'index']) ->name('rooms');
 Route::get('/rooms/{room}', function (Room $room) {
     return $room->id;
 });
-Route::get('/offers', function()
-{
-   return View::make('offers', ['title' => 'Offers']);
-});
+
+Route::get('/offers', [RoomController::class, 'index']) ->name('rooms');

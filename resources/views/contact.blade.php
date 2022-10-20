@@ -5,8 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hotel Miranda | {{$title}}</title>
-    <!-- <link rel="stylesheet" href="normalize.css" /> -->
+
      <link rel="stylesheet" type="text/css" href={{URL::to('css/home.css') }} />
     <link rel="stylesheet" type="text/css" href={{URL::to('css/carousel.css') }} />
     <link rel="stylesheet" type="text/css" href={{URL::to('css/button.css') }} />
@@ -16,7 +15,6 @@
     src="https://kit.fontawesome.com/b519a5fd3c.js"
     crossorigin="anonymous"
     ></script>
-      <script src="{{ URL::to('js/contact.js') }}" type='module'></script>
 
 </head>
 <body>
@@ -65,59 +63,33 @@
         </div>
       </div>
     </section>
+
     <section>
-      <div class="title-community">Comunidades Autonomas:</div>
-      <select
-        name="comunidadesAuto"
-        id="comunidadesAuto"
-        class="select-community"
-      >
-        <option value="">Select one...</option>
-      </select>
-      <div id="map" class="google-map"></div>
-      <label class="direction-title" for="myDirection"
-        >Dirección de usuario</label
-      ><br />
-      <input
-        class="direction-title__input"
-        type="text"
-        id="input"
-        placeholder="Enter a location"
-      />
-      <input
-        class="direction-title__submit"
-        type="button"
-        id="submit"
-        value="Submit"
-      />
-      <button class="find-location" style="margin: 20px" id="buttonRequest">
-        Find my nearest locations
-      </button>
-      <ul id="response"></ul>
-    </section>
-    <section>
-      <form action="" class="contact-form">
+      <form method="POST"  class="contact-form">
+          {{ csrf_field() }}
         <label for="">
-          <input type="text" placeholder="Your full name" />
+          <input name='customer' type="text" placeholder="Your full name" />
           <i class="fa-solid fa-user contact-icon"></i>
         </label>
         <label for="">
-          <input type="number" placeholder="Add phone number" />
+          <input name='phone_number'type="text" placeholder="Add phone number" />
           <i class="fa-solid fa-phone contact-icon"></i>
         </label>
         <label for="">
-          <input type="email" placeholder="Enter email address" />
+          <input name='email'type="email" placeholder="Enter email address" />
           <i class="fa-solid fa-envelope contact-icon"></i>
         </label>
         <label for="">
-          <input type="text" placeholder="Enter subject" />
+          <input name='title' type="text" placeholder="Enter subject" />
           <i class="fa-solid fa-book contact-icon"></i>
         </label>
         <label for="">
-          <input type="text" placeholder="Enter message" width="400px" />
+          <textarea name='comment' type="text"  rows="10" cols="33" ></textarea>
           <i class="fa-solid fa-pencil contact-icon"></i>
         </label>
-        <button class="contact-form__button">SEND</button>
+        <input type="submit" value="SEND" class="contact-form__button">
+
+
       </form>
     </section>
 

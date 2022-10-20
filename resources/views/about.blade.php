@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hotel Miranda | {{$title}}</title>
-    <!-- <link rel="stylesheet" href="normalize.css" /> -->
+
     <link rel="stylesheet" type="text/css" href={{URL::to('css/home.css') }} />
     <link rel="stylesheet" type="text/css" href={{URL::to('css/carousel.css') }} />
     <link rel="stylesheet" type="text/css" href={{URL::to('css/button.css') }} />
     <link rel="stylesheet" type="text/css" href={{URL::to('css/styles.css') }} />
+      <link rel="stylesheet" type="text/css" href={{URL::to('css/about.css') }} />
     <script
     src="https://kit.fontawesome.com/b519a5fd3c.js"
     crossorigin="anonymous"
@@ -18,12 +19,12 @@
 </head>
 <body>
       @include ('header')
-    <main>
+
     <section class="head-main">
       <h4 class="section">THE ULTIMATE LUXURY</h4>
       <h2 class="title">About Us</h2>
       <div class="head-main__buttons">
-        <a href="./index.php">Home</a>
+        <a href="./">Home</a>
         <span>|</span>
         <a class="head-main__buttons--sepia" href="">About</a>
       </div>
@@ -252,7 +253,7 @@
       </div>
     </div>
 
-    </main>
+
       @include ('footer')
 </body>
 </html>

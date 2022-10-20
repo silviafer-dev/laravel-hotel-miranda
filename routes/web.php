@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\OfferController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,4 +35,4 @@ Route::get('/rooms/{room}', function (Room $room) {
     return $room->id;
 });
 
-Route::get('/offers', [RoomController::class, 'index']) ->name('rooms');
+Route::get('/offers', [OfferController::class, 'index']) ->name('offers');

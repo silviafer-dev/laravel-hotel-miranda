@@ -28,21 +28,18 @@
         <a class="head-main__buttons--sepia" href="">Offers</a>
       </div>
     </section>
-@foreach ($rooms as $room) 
+@foreach ($rooms as $room)
+@if ($room->offer_price > '0.00')
     <section class="offers-list">
       <div class="container-photo-offers">
-        <img class="image" src="./images/photos/duplex.jpg" alt="luxury room" />
-        <div class="full-price">$500 <span>/Night</span></div>
-        <div class="offer-price">$345 <span>/Night</span></div>
+        <img class="image" src="{{$room->photo}}" alt="luxury room" />
+        <div class="full-price">{{$room->price}} <span>/Night</span></div>
+        <div class="offer-price">{{$room->offer_price}} <span>/Night</span></div>
       </div>
-      <h4 class="section section--grey">DOBLE BED</h4>
-      <h2 class="sub-title">Luxury Double Bed</h2>
+      <h4 class="section section--grey">{{$room->room_type}}</h4>
+      <h2 class="sub-title">{{$room->room_type}}</h2>
       <p class="paragraph">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehend erit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur.
+       {{$room->description}}
       </p>
 
       <div class="amenities-offers">
@@ -111,170 +108,8 @@
       </div>
       <button class="button-page button-page__sepia">BOOK NOW</button>
     </section>
-       <section class="offers-list">
-      <div class="container-photo-offers">
-        <img class="image" src="./images/photos/duplex3.jpg" alt="luxury room" />
-        <div class="full-price">$500 <span>/Night</span></div>
-        <div class="offer-price">$345 <span>/Night</span></div>
-      </div>
-      <h4 class="section section--grey">DOBLE BED</h4>
-      <h2 class="sub-title">Luxury Double Bed</h2>
-      <p class="paragraph">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehend erit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur.
-      </p>
-
-      <div class="amenities-offers">
-        <div class="amenities-offers__block">
-          <img src="./images/icons-room/air-conditioner.svg" alt="" />
-          <p class="amenities-offers__block amenities-offers__block--title">
-            Air conditioner
-          </p>
-        </div>
-        <div class="amenities-offers__block">
-          <img src="./images/icons-room/breakfast-icons.svg" alt="" />
-          <p class="amenities-offers__block amenities-offers__block--title">
-            Breakfast
-          </p>
-        </div>
-        <div class="amenities-offers__block">
-          <img src="./images/icons-room/cleaning.svg" alt="" />
-          <p class="amenities-offers__block amenities-offers__block--title">
-            Cleaning
-          </p>
-        </div>
-
-        <div class="amenities-offers__block">
-          <img src="./images/icons-room/support.svg" alt="" />
-          <p class="amenities-offers__block amenities-offers__block--title">
-            24/7 Online Support
-          </p>
-        </div>
-        <div class="amenities-offers__block">
-          <img src="./images/icons-room/air-conditioner.svg" alt="" />
-          <p class="amenities-offers__block amenities-offers__block--title">
-            Air conditioner
-          </p>
-        </div>
-        <div class="amenities-offers__block">
-          <img src="./images/icons-room/locker.svg" alt="" />
-          <p class="amenities-offers__block amenities-offers__block--title">
-            Smart Security
-          </p>
-        </div>
-        <div class="amenities-offers__block">
-          <img src="./images/icons-room/wifi.svg" alt="" />
-          <p class="amenities-offers__block amenities-offers__block--title">
-            High speed WiFi
-          </p>
-        </div>
-        <div class="amenities-offers__block">
-          <img src="./images/icons-room/kitchen.svg" alt="" />
-          <p class="amenities-offers__block amenities-offers__block--title">
-            Kitchen
-          </p>
-        </div>
-        <div class="amenities-offers__block">
-          <img src="./images/icons-room/shower.svg" alt="" />
-          <p class="amenities-offers__block amenities-offers__block--title">
-            Shower
-          </p>
-        </div>
-
-        <div class="amenities-offers__block">
-          <img src="./images/icons-room/towels.svg" alt="" />
-          <p class="amenities-offers__block amenities-offers__block--title">
-            Towels
-          </p>
-        </div>
-      </div>
-      <button class="button-page button-page__sepia">BOOK NOW</button>
-    </section>
-       <section class="offers-list">
-      <div class="container-photo-offers">
-        <img class="image" src="./images/photos/duplex2.jpg" alt="luxury room" />
-        <div class="full-price">$500 <span>/Night</span></div>
-        <div class="offer-price">$345 <span>/Night</span></div>
-      </div>
-      <h4 class="section section--grey">DOBLE BED</h4>
-      <h2 class="sub-title">Luxury Double Bed</h2>
-      <p class="paragraph">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehend erit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur.
-      </p>
-
-      <div class="amenities-offers">
-        <div class="amenities-offers__block">
-          <img src="./images/icons-room/air-conditioner.svg" alt="" />
-          <p class="amenities-offers__block amenities-offers__block--title">
-            Air conditioner
-          </p>
-        </div>
-        <div class="amenities-offers__block">
-          <img src="./images/icons-room/breakfast-icons.svg" alt="" />
-          <p class="amenities-offers__block amenities-offers__block--title">
-            Breakfast
-          </p>
-        </div>
-        <div class="amenities-offers__block">
-          <img src="./images/icons-room/cleaning.svg" alt="" />
-          <p class="amenities-offers__block amenities-offers__block--title">
-            Cleaning
-          </p>
-        </div>
-
-        <div class="amenities-offers__block">
-          <img src="./images/icons-room/support.svg" alt="" />
-          <p class="amenities-offers__block amenities-offers__block--title">
-            24/7 Online Support
-          </p>
-        </div>
-        <div class="amenities-offers__block">
-          <img src="./images/icons-room/air-conditioner.svg" alt="" />
-          <p class="amenities-offers__block amenities-offers__block--title">
-            Air conditioner
-          </p>
-        </div>
-        <div class="amenities-offers__block">
-          <img src="./images/icons-room/locker.svg" alt="" />
-          <p class="amenities-offers__block amenities-offers__block--title">
-            Smart Security
-          </p>
-        </div>
-        <div class="amenities-offers__block">
-          <img src="./images/icons-room/wifi.svg" alt="" />
-          <p class="amenities-offers__block amenities-offers__block--title">
-            High speed WiFi
-          </p>
-        </div>
-        <div class="amenities-offers__block">
-          <img src="./images/icons-room/kitchen.svg" alt="" />
-          <p class="amenities-offers__block amenities-offers__block--title">
-            Kitchen
-          </p>
-        </div>
-        <div class="amenities-offers__block">
-          <img src="./images/icons-room/shower.svg" alt="" />
-          <p class="amenities-offers__block amenities-offers__block--title">
-            Shower
-          </p>
-        </div>
-
-        <div class="amenities-offers__block">
-          <img src="./images/icons-room/towels.svg" alt="" />
-          <p class="amenities-offers__block amenities-offers__block--title">
-            Towels
-          </p>
-        </div>
-      </div>
-      <button class="button-page button-page__sepia">BOOK NOW</button>
-    </section>
+    @endif
+@endforeach
       @include ('footer')
 </body>
 </html>

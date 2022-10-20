@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-     <link rel="stylesheet" type="text/css" href={{URL::to('css/home.css') }} />
+    <title>Hotel Miranda | {{$title}}</title>
+    <link rel="stylesheet" type="text/css" href={{URL::to('css/home.css') }} />
     <link rel="stylesheet" type="text/css" href={{URL::to('css/carousel.css') }} />
     <link rel="stylesheet" type="text/css" href={{URL::to('css/button.css') }} />
     <link rel="stylesheet" type="text/css" href={{URL::to('css/styles.css') }} />
@@ -23,7 +23,7 @@
 <main>
 <section class="head-main">
       <h4 class="section">THE ULTIMATE LUXURY</h4>
-      <h2 class="title">New Details</h2>
+      <h2 class="title">Contact Us</h2>
       <div class="head-main__buttons">
         <a href="./">Home</a>
         <span>|</span>

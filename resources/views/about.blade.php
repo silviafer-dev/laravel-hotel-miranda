@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hotel Miranda | {{$title}}</title>
-
     <link rel="stylesheet" type="text/css" href={{URL::to('css/home.css') }} />
     <link rel="stylesheet" type="text/css" href={{URL::to('css/carousel.css') }} />
     <link rel="stylesheet" type="text/css" href={{URL::to('css/button.css') }} />
